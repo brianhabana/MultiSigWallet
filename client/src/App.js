@@ -1,11 +1,12 @@
 import React, {useEffect, useState } from 'react';
 import { getWeb3, getWallet } from './utils.js';
+import Header from './Header.js';
 
 function App() {
   const [web3, setWeb3] = useState(undefined);
   const [accounts, setAccounts] = useState(undefined);
   const [wallet, setWallet] = useState(undefined);
-  const [approvers, setApprovers] = useState(undefined);
+  const [approvers, setApprovers] = useState([]);
   const [quorum, setQuorum] = useState(undefined);
   
   useEffect(() => {
@@ -28,6 +29,9 @@ function App() {
     typeof web3 === 'undefined'
     || typeof accounts === 'undefined'
     || typeof wallet ==='undefined'
+    || approvers.length === 0
+    || typeof quorum === 'undefined'
+
   ) {
     return <div>loading...</div>;
   }
@@ -35,6 +39,7 @@ function App() {
   return (
     <div>
       Multisig dApp
+      <Header approvers={approvers} quorum={quorum} />
     </div>
   );
 }
