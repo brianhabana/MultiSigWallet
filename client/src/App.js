@@ -3,7 +3,7 @@ import React from 'react';
 function App() {
   return (
     <div>
-      MultiSig dApp
+      Multisig dApp
     </div>
   );
 }
