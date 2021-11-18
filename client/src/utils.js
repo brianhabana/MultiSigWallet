@@ -14,3 +14,5 @@ const getWallet = async web3 => {
         contractDeployment && contractDeployment.address
     );
 }
+
+export { getWeb3, getWallet }
