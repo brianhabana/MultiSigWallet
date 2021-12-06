@@ -1,6 +1,6 @@
-pragma solidity ^0.6.0;
+pragma solidity ^0.8.0;
 //ability to return array of struct in getTransfers
-pragma experimental ABIEncoderV2;
+//pragma experimental ABIEncoderV2;
 
 contract Wallet {
     //define approved addresses as an array that is accessible outside smart contract
@@ -25,7 +25,7 @@ contract Wallet {
     mapping(address => mapping(uint => bool)) public approvals;
     
     //set values for approvers and quorum varibles
-    constructor(address[] memory _approvers, uint _quorum) public {
+    constructor(address[] memory _approvers, uint _quorum) {
         approvers = _approvers;
         quorum = _quorum; 
     }
