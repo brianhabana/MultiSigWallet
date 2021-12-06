@@ -1,6 +1,6 @@
 import React from 'react';
 
-function TransferList ({ transfer }) {
+function TransferList ({ transfers }) {
     return (
     <div>
         <h2>Transfers</h2>
@@ -15,7 +15,7 @@ function TransferList ({ transfer }) {
                 </tr>
             </thead> 
             <tbody>
-            {transfer.map(transfer => (
+            {transfers.map(transfer => (
                 <tr key={transfer.id}>
                     <td>{transfer.id}</td>
                     <td>{transfer.amount}</td>
