@@ -21,7 +21,7 @@ function TransferList ({ transfers, approveTransfer }) {
                     <td>{transfer.amount}</td>
                     <td>{transfer.to}</td>
                     <td>{transfer.approvals}
-                    <button onClick={() => approveTransfer(transfer.id)}>Approver </button>
+                    <button onClick={() => approveTransfer(transfer.id)}>Approve </button>
                     </td>
                     <td>{transfer.sent ? 'yes' : 'no'}</td>
                 </tr>
